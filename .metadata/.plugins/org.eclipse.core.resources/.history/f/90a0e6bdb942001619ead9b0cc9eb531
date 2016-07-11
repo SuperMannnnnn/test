@@ -1,0 +1,19 @@
+package com.dabao.pictruestore.modell.impl;
+
+import com.dabao.pictruestore.modell.IShowPictureModel;
+
+/**
+ *Created by dabao 2016Äê7ÔÂ5ÈÕ
+ */
+public class ShowPictureImpl implements IShowPictureModel{
+	
+	
+	
+	
+	@Override
+	public void loadGallerys(AsynCallback back) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

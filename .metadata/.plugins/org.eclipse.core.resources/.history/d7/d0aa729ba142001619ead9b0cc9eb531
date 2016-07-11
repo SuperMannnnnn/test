@@ -1,0 +1,13 @@
+package com.dabao.pictruestore.entity;
+
+import java.util.List;
+
+/**
+ *Created by dabao 2016Äê7ÔÂ5ÈÕ
+ */
+public class TotalGallery {
+
+	 private boolean  status;
+	 private int  total;
+	  private List<Gallery> tngous;
+}

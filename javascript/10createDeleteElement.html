@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function send()
+			{
+				//1得到输入的内容
+				var content=document.getElementById("content").value;
+				//2得到ul
+				var ul=document.getElementById("chatUl");
+				//3创建li
+				var li=document.createElement("li");
+				li.style.backgroundColor="#A9A9A9";
+				li.style.fontSize="48px";
+				li.innerHTML=content;
+				//4把li放到ul
+				ul.appendChild(li);
+			}
+			
+			function deleteChatContent () {
+				//1,找到ul
+				var ul=document.getElementById("chatUl");
+				//2，通过ul找到他的所有子控件
+				var child=ul.childNodes;
+				console.log(child);
+				for(var i=child.length-1;i>=0;i--)
+				{
+					//3,把每个子控件删除
+					var li=child[i];
+					li.remove();
+				}
+				
+			
+			}
+		</script>
+	</head>
+	<body>
+		<a href="javascript:deleteChatContent()">delete</a>
+		<ul id="chatUl"></ul>
+		<input id="content" />
+		<input type="button" value="send" onclick="send()" />
+	</body>
+</html>

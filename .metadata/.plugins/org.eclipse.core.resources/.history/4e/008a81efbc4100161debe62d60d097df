@@ -1,0 +1,19 @@
+package com.dabao.customlistview;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
+import android.widget.ListView;
+
+/**
+ *Created by dabao 2016Äê7ÔÂ4ÈÕ
+ */
+public class CustomListView extends ListView{
+	View view;
+	public CustomListView(Context context, AttributeSet attrs) {
+		super(context, attrs);
+		view = View.inflate(getContext(), R.layout.listview_header, null);
+		this.addHeaderView(view);
+	}
+
+}

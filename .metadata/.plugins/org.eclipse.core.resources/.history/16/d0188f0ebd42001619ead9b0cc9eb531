@@ -1,0 +1,57 @@
+package com.dabao.pictruestore.presenter.impl;
+
+import java.util.List;
+
+import android.util.Log;
+
+import com.dabao.pictruestore.entity.Gallery;
+import com.dabao.pictruestore.modell.IGalleryModel;
+import com.dabao.pictruestore.modell.IModel.AsynCallback;
+import com.dabao.pictruestore.modell.IShowPictureModel;
+import com.dabao.pictruestore.modell.impl.GalleryModelImpl;
+import com.dabao.pictruestore.modell.impl.ShowPictureModleImpl;
+import com.dabao.pictruestore.presenter.IGalleryPresenter;
+import com.dabao.pictruestore.presenter.IShowPicturePresenter;
+import com.dabao.pictruestore.view.IGalleryView;
+import com.dabao.pictruestore.view.IShowPictureView;
+
+/**
+ *Created by dabao 2016Äê7ÔÂ4ÈÕ
+ */
+public class ShowPicturePresenterImpl implements IShowPicturePresenter{
+
+	private IShowPictureModel model;
+	private IShowPictureView view;
+	
+	
+	
+	
+	
+	public ShowPicturePresenterImpl(IShowPictureView view) {
+		this.model = new ShowPictureModleImpl();
+		this.view = view;
+	}
+
+
+
+
+
+	@Override
+	public void loadGallerys() {
+		model.loadGallerys(new AsynCallback() {
+			
+			@Override
+			public void onSuccess(Object success) {
+				List<Gallery>gallerys = (List<Gallery>) success;
+				Log.i("dabao", "1111111111111111"+gallerys);
+				view.showGalleryList(gallerys);
+			}
+			
+			@Override
+			public void onError(Object error) {
+			}
+		});
+		
+	}
+
+}

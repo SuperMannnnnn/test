@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;CircleImageView.java&apos; to &apos;BookStore/src/com.dabao.bookstore.ui&apos;&#x0D;&#x0A;- Original project: &apos;女优电话薄&apos;&#x0D;&#x0A;- Destination element: &apos;BookStore/src/com.dabao.bookstore.ui&apos;&#x0D;&#x0A;- Original element: &apos;com.dabao.contact.ui.CircleImageView.java&apos;" description="Copy compilation unit" destination="=BookStore/src&lt;com.dabao.bookstore.ui" element1="/src&lt;com.dabao.contact.ui{CircleImageView.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1466999110370" units="1" version="1.0"/>
+</session>

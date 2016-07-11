@@ -1,0 +1,10 @@
+package com.dabao.firstmatch.app;
+
+import android.app.Application;
+
+/**
+ *Created by dabao 2016Äê7ÔÂ6ÈÕ
+ */
+public class MyApplication extends Application{
+
+}

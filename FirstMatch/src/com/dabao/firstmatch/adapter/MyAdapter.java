@@ -1,0 +1,72 @@
+package com.dabao.firstmatch.adapter;
+
+import java.util.List;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.TextView;
+
+import com.dabao.firstmatch.R;
+import com.dabao.firstmatch.entity.Result;
+
+/**
+ *Created by dabao 2016Äê7ÔÂ6ÈÕ
+ */
+public class MyAdapter extends BaseAdapter{
+	private Context context;
+	private List<Result>results;
+	private LayoutInflater inflater;
+	
+	
+	
+	public MyAdapter(Context context, List<Result> results) {
+		super();
+		this.context = context;
+		this.results = results;
+		this.inflater = LayoutInflater.from(context);
+	}
+
+	@Override
+	public int getCount() {
+		return results.size();
+	}
+
+	@Override
+	public Result getItem(int position) {
+		return results.get(position);
+	}
+
+	@Override
+	public long getItemId(int position) {
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		ViewHolder holder = null;
+		if (convertView == null) {
+			convertView = inflater.inflate(com.dabao.firstmatch.R.layout.item_lv, null);
+			holder = new ViewHolder();
+			holder.tvDesc = (TextView) convertView.findViewById(R.id.tv_desc);
+			holder.tvUrl = (TextView) convertView.findViewById(R.id.tv_url);
+			convertView.setTag(holder);
+		}
+		holder = (ViewHolder) convertView.getTag();
+		Result result = getItem(position);
+		holder.tvDesc.setText(result.getDesc());
+		holder.tvUrl.setText(result.getUrl());
+		
+		
+		return convertView;
+	}
+
+	class ViewHolder{
+		private TextView tvDesc;
+		private TextView tvUrl;
+	}
+	
+	
+}

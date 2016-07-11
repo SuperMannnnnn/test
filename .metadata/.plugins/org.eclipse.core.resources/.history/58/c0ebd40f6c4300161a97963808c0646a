@@ -1,0 +1,33 @@
+package com.dabao.firstmatch.model.impl;
+
+import java.util.List;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
+import com.dabao.firstmatch.app.MyApplication;
+import com.dabao.firstmatch.entity.Text;
+import com.dabao.firstmatch.model.ITextModel;
+
+/**
+ *Created by dabao 2016Äê7ÔÂ6ÈÕ
+ */
+public class TextModel implements ITextModel {
+
+	private List<Text>texts;
+	private RequestQueue queue;
+	
+	
+	
+	public TextModel() {
+		queue = Volley.newRequestQueue(MyApplication.getContext());
+	}
+
+
+
+	@Override
+	public void loadText(AsynCallback back) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

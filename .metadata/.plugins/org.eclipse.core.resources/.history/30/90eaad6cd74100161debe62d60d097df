@@ -1,0 +1,8 @@
+package com.dabao.pictruestore.ui;
+/**
+ *Created by dabao 2016Äê6ÔÂ26ÈÕ
+ */
+public class UrlConsts {
+	
+	public static final String URL_PICTURE ="http://www.tngou.net/tnfs/show";
+}

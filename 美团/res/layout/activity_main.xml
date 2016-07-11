@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/layout_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#111111"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_deal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/bnt_deal_selector"
+            android:minHeight="0dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="8dp"
+            android:text="团购"
+            android:textColor="@drawable/bnt_color_selector"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_nearby"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/bnt_nearby_selector"
+            android:minHeight="0dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="8dp"
+            android:text="附近"
+            android:textColor="@drawable/bnt_color_selector"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_my"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/bnt_nearby_selector"
+            android:minHeight="0dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="8dp"
+            android:text="我的"
+            android:textColor="@drawable/bnt_color_selector"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_more"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/bnt_nearby_selector"
+            android:minHeight="0dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="8dp"
+            android:text="更多"
+            android:textColor="@drawable/bnt_color_selector"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</RelativeLayout>

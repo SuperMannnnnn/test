@@ -1,0 +1,93 @@
+package com.dabao.pictruestore.activity;
+
+import java.util.List;
+
+import org.xutils.x;
+import org.xutils.view.annotation.ViewInject;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.animation.Animation;
+import android.widget.Button;
+import android.widget.ImageSwitcher;
+
+import com.dabao.pictruestore.R;
+import com.dabao.pictruestore.app.MyApplication;
+import com.dabao.pictruestore.entity.Picture;
+import com.dabao.pictruestore.presenter.IShowPicturePresenter;
+import com.dabao.pictruestore.presenter.impl.ShowPicturePresenterImpl;
+import com.dabao.pictruestore.view.IShowPictureView;
+
+public class DisplayPictureActivity extends Activity implements IShowPictureView{
+	/**
+	 * 图片的数据
+	 */
+	private List<Picture> pictures;
+	/**
+	 * ImageStoreApplication
+	 */
+	private MyApplication app;
+	/**
+	 * ImageSwitcher：显示图片的控件
+	 */
+	@ViewInject(R.id.is_pictures)
+	private ImageSwitcher isPictures;
+	/**
+	 * Button：显示上一张
+	 */
+	@ViewInject(R.id.btn_previous)
+	private Button btnPrevious;
+	/**
+	 * Button：显示下一张
+	 */
+	@ViewInject(R.id.btn_next)
+	private Button btnNext;
+	/**
+	 * 当前需要显示的图片的position
+	 */
+	private int currentPicturePisition;
+	private Animation left2rightInAnim;
+	private Animation left2rightOutAnim;
+	private Animation right2leftInAnim;
+	private Animation right2leftOutAnim;
+	
+	
+	private IShowPicturePresenter presenter;
+
+	public DisplayPictureActivity() {
+		presenter = new ShowPicturePresenterImpl(this);
+	}
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_display_picture);
+		x.view().inject(this);
+		
+		presenter.loadGallerys(currentPicturePisition);
+		
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.display_picture, menu);
+		return true;
+	}
+
+	@Override
+	public void showGalleryList(List<Picture> Pictures) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

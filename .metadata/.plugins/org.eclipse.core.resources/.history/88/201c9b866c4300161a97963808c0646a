@@ -1,0 +1,40 @@
+package com.dabao.firstmatch.activity;
+
+import org.xutils.x;
+import org.xutils.view.annotation.ViewInject;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.widget.ListView;
+
+import com.dabao.firstmatch.R;
+
+public class MainActivity extends Activity {
+
+	@ViewInject(R.id.lv)
+	private ListView lv;
+	
+	
+	
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		x.view().inject(this);
+		
+	}
+
+	
+	
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+}

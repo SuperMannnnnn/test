@@ -1,0 +1,35 @@
+package com.dabao.pictruestore.modell.impl;
+
+import java.util.List;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
+import com.dabao.pictruestore.app.MyApplication;
+import com.dabao.pictruestore.entity.Gallery;
+import com.dabao.pictruestore.modell.IGalleryModel;
+
+/**
+ *Created by dabao 2016Äê7ÔÂ4ÈÕ
+ */
+public class GalleryModelImpl implements IGalleryModel{
+
+	private List<Gallery>gallerys;
+	private RequestQueue queue;
+	
+	
+	
+	
+	public GalleryModelImpl() {
+		queue = Volley.newRequestQueue(MyApplication.getContext());
+	}
+
+
+
+
+	@Override
+	public void loadGallerys(AsynCallback back) {
+		
+		
+	}
+
+}

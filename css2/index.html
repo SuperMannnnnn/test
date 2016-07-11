@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title> </title>
+		<!--
+            	作者：337448816@qq.com
+            	时间：2016-07-07
+            	描述：1.引用外部样式表文件
+            -->
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<!--
+    	作者：337448816@qq.com
+    	时间：2016-07-07
+    	描述：2.把样式定义在head中，支队本网页有效
+    -->
+		<style type="text/css">
+			/**样式名称与标签名相同,重新定义p标签**/
+			p {
+				color: blue;
+				font-size: 120px;
+			}
+			
+			/**不会自动生效**/
+			.pBackground {background-image: url(1.jpg);}
+		</style>
+	</head>
+
+	<body>
+		<!--
+        	作者：337448816@qq.com
+        	时间：2016-07-07
+        	描述：3.通过style属性定义样式表，支队本标签有效，优先级最高
+        -->
+		<p style type="text/css" ; color: aquamarine; font-size: 160px;></p>
+		<p class="pBackground">伊利丹·怒风</p>
+		<table class="pBackground" width="300" height="300"></table>
+		</style>
+		<p>新闻联播</p>
+	</body>
+
+</html>

@@ -1,0 +1,7 @@
+package com.dabao.pictruestore.modell;
+/**
+ *Created by dabao 2016Äê7ÔÂ10ÈÕ
+ */
+public interface INewModel {
+
+}

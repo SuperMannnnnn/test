@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;AChartEngineDemo/lib&apos; to &apos;libs&apos;" description="Rename resource &apos;lib&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="lib" name="libs" stamp="1467600172079" updateReferences="true"/>
+</session>

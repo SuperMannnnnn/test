@@ -1,0 +1,64 @@
+package com.dabao.pictruestore.modell.impl;
+
+import java.util.List;
+
+import android.util.Log;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response.ErrorListener;
+import com.android.volley.Response.Listener;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.dabao.pictruestore.app.MyApplication;
+import com.dabao.pictruestore.entity.Gallery;
+import com.dabao.pictruestore.modell.IGalleryModel;
+import com.dabao.pictruestore.ui.UrlConsts;
+import com.google.gson.Gson;
+
+/**
+ *Created by dabao 2016Äê7ÔÂ4ÈÕ
+ */
+public class GalleryModelImpl implements IGalleryModel{
+
+	private List<Gallery>gallerys;
+	private RequestQueue queue;
+	
+	
+	
+	
+	public GalleryModelImpl() {
+		queue = Volley.newRequestQueue(MyApplication.getContext());
+	}
+
+
+
+
+	@Override
+	public void loadGallerys(final AsynCallback back) {
+		String url = UrlConsts.URL_GALLERY_COVER;
+		final Gson gson=new Gson();
+
+		StringRequest request = new StringRequest(url, new Listener<String>() {
+
+			@Override
+			public void onResponse(String response) {
+				Gallery gallery=gson.fromJson(response, Gallery.class);
+				
+				String img =gallery.getImg();
+				
+				Log.i("GalleryModelImpl++image", img+"");
+				back.onSuccess(img);
+			}
+		}, new ErrorListener() {
+
+			@Override
+			public void onErrorResponse(VolleyError error) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		queue.add(request);
+	}
+
+}

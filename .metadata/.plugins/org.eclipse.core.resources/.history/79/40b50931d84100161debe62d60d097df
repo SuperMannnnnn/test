@@ -1,0 +1,15 @@
+package com.dabao.pictruestore.ui;
+/**
+ *Created by dabao 2016年6月26日
+ */
+public class UrlConsts {
+	/**
+	 * 前面总url
+	 */
+	public static final String URL_PICTURE ="http://www.tngou.net/tnfs/show";
+	/**
+	 * 图库封面图片前url
+	 */
+	public static final String URL_PICTURE_fen_mian ="http://tnfs.tngou.net/img";
+	
+}

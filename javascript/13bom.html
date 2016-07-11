@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var index=0;
+			function run () {
+				index++;
+				console.log("index="+index);
+			}
+			//android handle.postDelayed()
+			function timeOut () {
+				console.log("timeOut ()");
+				window.setTimeout(run,5000);
+			}
+			//javascript没有实现多线程
+			//javascript是单线程
+			var thread;
+			function start () {
+				//每隔1000，运行run
+				thread=window.setInterval(run,1000);
+			}
+			function stop () {
+				window.clearInterval(thread);
+			}
+		</script>
+	</head>
+	<body>
+		<input onclick="timeOut()" id="timeout" type="button" value="timeout">
+		<input onclick="start()" id="start" type="button" value="start">
+		<input onclick="stop()" id="stop" type="button" value="stop">
+
+	</body>
+</html>

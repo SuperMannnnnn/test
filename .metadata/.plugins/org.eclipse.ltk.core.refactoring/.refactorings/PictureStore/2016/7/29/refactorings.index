@@ -1,0 +1,7 @@
+1468136375681	Rename type 'News'
+1468136705328	Rename resource 'fragment_grilandjoke.xml'
+1468137505766	Rename type 'INewsView'
+1468137542486	Rename type 'INewPresenter'
+1468137570975	Rename type 'INewModel'
+1468137598647	Rename type 'NewModelImpl'
+1468140601302	Rename type 'GirlAndJokeFragment'

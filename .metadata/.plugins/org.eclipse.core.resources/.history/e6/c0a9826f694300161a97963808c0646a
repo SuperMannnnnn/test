@@ -1,0 +1,11 @@
+package com.dabao.firstmatch.entity;
+
+import java.util.List;
+
+/**
+ * Created by dabao 2016Äê7ÔÂ6ÈÕ
+ */
+public class Text {
+	private boolean error;
+	private List<Result> results;
+}

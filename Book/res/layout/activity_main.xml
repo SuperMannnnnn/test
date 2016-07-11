@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rg_meun"
+        android:layout_below="@+id/top_meun" >
+    </android.support.v4.view.ViewPager>
+
+    <!-- 底部菜单栏 -->
+
+    <RadioGroup
+        android:id="@+id/rg_meun"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/shouye_bar_bottom"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radioStore"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/selector01"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:text="书城"
+            android:textColor="#555555"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radioCart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector02"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:text="购物车"
+            android:textColor="#555555"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radioMine"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector03"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:text="我的T-BOOK"
+            android:textColor="#555555"
+            android:textSize="14sp" />
+    </RadioGroup>
+  
+
+</RelativeLayout>

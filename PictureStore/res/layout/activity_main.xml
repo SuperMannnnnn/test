@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+  <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:checked="true"
+            android:gravity="center"
+            android:id="@+id/btn_tab_menu_gril"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/tab_menu_girl_selector"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:paddingBottom="6dp"
+            android:paddingTop="8dp"
+            android:text="美女"
+            android:textColor="@drawable/tab_menu_text_color_selector"
+            android:textSize="14sp" />
+
+        <RadioButton
+             android:gravity="center"
+            android:id="@+id/btn_tab_menu_joke"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/tab_menu_joke_selector"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:paddingBottom="6dp"
+            android:paddingTop="8dp"
+            android:text="笑话"
+            android:textColor="@drawable/tab_menu_text_color_selector"
+            android:textSize="14sp" />
+
+        <RadioButton
+             android:gravity="center"
+            android:id="@+id/btn_tab_menu_grilandjoke"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/tab_menu_jokepictrue_selector"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:paddingBottom="6dp"
+            android:paddingTop="8dp"
+            android:text="图文"
+            android:textColor="@drawable/tab_menu_text_color_selector"
+            android:textSize="14sp" />
+
+        <RadioButton
+             android:gravity="center"
+            android:id="@+id/btn_tab_menu_more"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/tab_menu_more_selector"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:paddingBottom="6dp"
+            android:paddingTop="8dp"
+            android:text="更多"
+            android:textColor="@drawable/tab_menu_text_color_selector"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/radioGroup"
+        android:background="#ffccaacc" >
+    </android.support.v4.view.ViewPager>
+</RelativeLayout>

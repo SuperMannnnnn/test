@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;LrcLine.java&apos; to &apos;音乐播放器.v4/src/com.dabao.v4.entiy&apos;&#x0D;&#x0A;- Original project: &apos;音乐播放器.v4&apos;&#x0D;&#x0A;- Destination element: &apos;音乐播放器.v4/src/com.dabao.v4.entiy&apos;&#x0D;&#x0A;- Original element: &apos;com.dabao.v4.dal.LrcLine.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;com.dabao.v4.entiy" element1="/src&lt;com.dabao.v4.dal{LrcLine.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1465731002625" units="1" version="1.0"/>
+</session>

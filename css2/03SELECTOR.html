@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			* {
+				color: red;
+			}
+			
+			p {
+				font-size: 48px;
+			}
+			
+			news {
+				font-size: 96px;
+			}
+			/**4，id选择器，只对id为mainDiv的有效**/
+			
+			#mainDiv {
+				width: 200px;
+				height: 200px;
+				background-color: green;
+			}
+			/**5,组选择器**/
+			
+			#mainDiv,
+			.title,
+			li {
+				font-size: 120px;
+				color: yellow;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<p class="news">新闻</p>
+		<p>岛国电影</p>
+		<ol>
+			<li>台湾回归</li>
+		</ol>
+		<!--div是个容器-->
+		<div id="mainDiv">div1</div>
+		<div class="title">div2</div>
+	</body>
+
+</html>

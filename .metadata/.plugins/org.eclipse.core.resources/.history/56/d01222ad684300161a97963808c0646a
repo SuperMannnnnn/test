@@ -1,0 +1,7 @@
+package com.dabao.firstmatch.presenter.impl;
+/**
+ *Created by dabao 2016Äê7ÔÂ6ÈÕ
+ */
+public interface ITextPresenter {
+
+}

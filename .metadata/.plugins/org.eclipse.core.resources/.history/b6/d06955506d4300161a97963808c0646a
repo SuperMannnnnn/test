@@ -1,0 +1,50 @@
+package com.dabao.firstmatch.presenter.impl.Impl;
+
+import java.util.List;
+
+import com.dabao.firstmatch.entity.Result;
+import com.dabao.firstmatch.model.IModel.AsynCallback;
+import com.dabao.firstmatch.model.ITextModel;
+import com.dabao.firstmatch.model.impl.TextModel;
+import com.dabao.firstmatch.presenter.impl.ITextPresenter;
+import com.dabao.firstmatch.view.IGithubView;
+
+/**
+ *Created by dabao 2016Äê7ÔÂ6ÈÕ
+ */
+public class TextPresenter implements ITextPresenter{
+	private ITextModel model;
+	private IGithubView view;
+	
+	
+	
+	
+	
+	public TextPresenter(IGithubView view) {
+		this.view = view;
+		this.model = new TextModel();
+	}
+
+
+
+
+
+	@Override
+	public void loadText() {
+		model.loadText(new AsynCallback() {
+			
+			@Override
+			public void onSuccess(Object success) {
+				List<Result>results = (List<Result>) success;
+				view.loadText(results);
+			}
+			
+			@Override
+			public void onError(Object error) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+	}
+
+}

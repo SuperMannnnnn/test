@@ -1,0 +1,92 @@
+package com.dabao.pictruestore.fragment;
+
+import java.util.List;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.GridView;
+
+import com.dabao.pictruestore.R;
+import com.dabao.pictruestore.adapter.GalleryAdapter;
+import com.dabao.pictruestore.entity.Gallery;
+import com.dabao.pictruestore.entity.Picture;
+import com.dabao.pictruestore.view.IPictureView;
+
+
+
+/**
+ *Created by dabao 2016Äê6ÔÂ26ÈÕ
+ */
+public class GirlFragment extends Fragment implements IPictureView{
+	
+	private List<Gallery>gallerys;
+	private GridView gvPicture;
+	private GalleryAdapter galleryAdapter;
+	
+	
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		View view = inflater.inflate(R.layout.fragment_gril, null);
+		setViews(view);
+		setAdapter();
+		
+		
+		return view;
+	}
+	
+	
+	
+	
+
+
+
+
+
+
+	private void setAdapter() {
+		
+		
+		galleryAdapter = new GalleryAdapter(getActivity(), gallerys);
+		gvPicture.setAdapter(galleryAdapter);
+		
+	}
+
+
+
+
+
+
+
+
+
+
+	private void setViews(View view) {
+		gvPicture = (GridView) view.findViewById(R.id.gv_picture);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	@Override
+	public void showPictureList(List<Picture> pictures) {
+		// TODO Auto-generated method stub
+		
+	}
+}

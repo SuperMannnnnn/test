@@ -1,0 +1,33 @@
+package com.dabao.pictruestore.modell.impl;
+
+import java.net.URL;
+import java.util.List;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
+import com.dabao.pictruestore.app.MyApplication;
+import com.dabao.pictruestore.entity.Gallery;
+import com.dabao.pictruestore.entity.Picture;
+import com.dabao.pictruestore.modell.IShowPictureModel;
+import com.dabao.pictruestore.ui.UrlConsts;
+
+/**
+ *Created by dabao 2016Äê7ÔÂ5ÈÕ
+ */
+public class ShowPictureImpl implements IShowPictureModel{
+	private List<Picture>pictures;
+	private RequestQueue queue;
+	Gallery gallery = new Gallery();
+	
+	public ShowPictureImpl() {
+		queue = Volley.newRequestQueue(MyApplication.getContext());
+	}
+
+
+
+	@Override
+	public void loadGallerys(AsynCallback back) {
+		String url = UrlConsts.URL_GALLERY_SHOW+"?"+gallery.getId();
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.dabao.pictruestore.modell;
+
+import com.dabao.pictruestore.modell.IModel.AsynCallback;
+
+/**
+ *Created by dabao 2016年7月4日
+ */
+public interface IGalleryModel extends IModel{
+	/**
+	 * 加载图片回调
+	 * @param back
+	 */
+	void loadGallerys(AsynCallback back);
+}

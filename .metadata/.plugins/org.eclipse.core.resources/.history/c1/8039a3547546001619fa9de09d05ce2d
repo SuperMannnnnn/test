@@ -1,0 +1,23 @@
+package com.dabao.pictruestore.modell.impl;
+
+import com.dabao.pictruestore.modell.IDetailModel;
+
+/**
+ *Created by dabao 2016Äê7ÔÂ10ÈÕ
+ */
+public class DetailModelImpl implements IDetailModel{
+
+	
+	
+	
+	
+	@Override
+	public void loadDetail(AsynCallback back) {
+		
+	}
+	
+	
+	
+
+
+}

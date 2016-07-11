@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<style type="text/css">
+			body {
+				margin: 0px;
+				font-size: 48px;
+			}
+			
+			#chatDiv {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: green;
+			}
+			
+			#contentDiv {
+				position: absolute;
+				top: 0px;
+				bottom: 96px;
+				width: 100%;
+				background-color: cyan;
+			}
+			
+			#inputDiv {
+				position: absolute;
+				bottom: 0px;
+				width: 100%;
+				height: 96px;
+				background-color: darkgray;
+			}
+		</style>
+
+		<script type="text/javascript">
+			function send() {
+				//找到input标签
+				//input是一个输入框对象
+				var input = document.getElementById("content");
+				//得到的内容
+				//.value是input对象的属性
+				var content = input.value;
+				input.value = "";
+				//找到contentDiv
+				var contentDiv = document.getElementById("contentDiv");
+				//把内容添加到contentdiv中
+				//div是个容器，容器再放子标签span
+				var span = "<span>" + content + "</span><br/>";
+				//innerHtml设置标签中的内容
+				contentDiv.innerHTML = contentDiv.innerHTML + span;
+			}
+
+			function modifyCss() {
+				//找到contentDiv
+				var contentDiv = document.getElementById("contentDiv");
+				//设置样式
+				contentDiv.style.backgroundColor = "#FF0000";
+				//span是个集合，数组，包含多个标签
+				var spanArray = document.getElementsByTagName("span");
+				for (var i = 0; i < spanArray.length; i++) {
+					var span = spanArray[i];
+					span.style.backgroundColor = "#00FF00";
+					span.style.fontSize = "90px";
+				}
+
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="chatDiv">
+			<div id="contentDiv"></div>
+			<div id="inputDiv">
+				<input id="content">
+				<input type="button" value="send" onclick="send()" />
+				<input type="button" value="modifycss" onclick="modifyCss()" />
+
+			</div>
+		</div>
+	</body>
+</html>

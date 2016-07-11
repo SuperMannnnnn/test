@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//面向对象实现有三种方式
+			//1:new object创建对象
+			var userEntity = new Object();
+			//为对象增加属性
+			userEntity.username = "张久军";
+			userEntity.age = 180;
+			//为对象增加函数
+			userEntity.show = function() {
+					window.alert(this.username + "," + this.age);
+				}
+				//调用对象的函数
+			userEntity.show();
+			//2:从json中创建对象
+			//var jsonString={"username":"张久军","age":18};
+			var userEntity = {
+				username: "aaaaa111",
+				age: 18
+			};
+			userEntity.show = function() {
+				window.alert("json" + this.username);
+			}
+			userEntity.show();
+			//3：通过函数创建对象
+			function UserEntity(username, age) {				
+				this.show = function() {
+					window.alert("函数创建对象" + this.username);
+				}
+			}
+			//从函数创建对象,创建的时候不能指定属性
+			var entity1 = new UserEntity();
+			entity1.username="a";
+			entity1.age=19
+			entity1.show();
+			
+			//创建多个对象
+			var entity2=new UserEntity();
+			entity2.username="kkkk";
+			entity2.age=20;
+			//随时增加属性和函数
+			//java中增加一个子类，为子类增加属性和方法
+			entity2.address="北京";
+			entity2.showAddress=function()
+			{
+				window.alert(this.address);
+			}
+			
+			entity2.show();
+			entity2.showAddress();
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

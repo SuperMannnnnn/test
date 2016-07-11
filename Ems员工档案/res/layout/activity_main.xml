@@ -1,0 +1,151 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#887766"
+        android:gravity="center_horizontal"
+        android:text="添加员工 "
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginRight="2.5dp"
+        android:layout_marginTop="5dp"
+        android:background="#887766"
+        android:text="姓名： "
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginLeft="2.5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:hint="请输入名字：" />
+    
+    <requestFocus
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginRight="2.5dp"
+        android:layout_marginTop="5dp"
+        android:background="#887766"
+        android:text="年龄： "
+        android:textSize="30sp" />
+
+
+    <EditText
+        android:id="@+id/EditText01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginLeft="2.5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/TextView01"
+        android:ems="10"
+        android:hint="请输入年龄：" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextView01"
+        android:layout_marginRight="2.5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/EditText01"
+        android:background="#887766"
+        android:text="工资： "
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/EditText02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/TextView02"
+        android:layout_marginLeft="2.5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/TextView02"
+        android:ems="10"
+        android:hint="请输入工资：" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/TextView02"
+        android:layout_marginRight="2.5dp"
+        android:layout_marginTop="5dp"
+        android:background="#887766"
+        android:text="性别： "
+        android:textSize="30sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/EditText02"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/EditText02"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radioM"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="男" />
+
+        <RadioButton
+            android:id="@+id/radioF"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="女" />
+    </RadioGroup>
+
+    <Button
+        android:onClick="doClick"
+        android:layout_marginTop="5dp"
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/TextView03"
+        android:background="#887766"
+        android:text="提交" />
+	<ImageView 
+	    android:id="@+id/iv"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/button1"
+	    android:src="@drawable/hd1"
+	    />
+</RelativeLayout>

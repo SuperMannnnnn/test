@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function add (n1,n2) {
+				var sum=0;
+				sum=n1+n2;
+				return sum;
+			}
+			//名称相同，最后的有效
+			function add()
+			{
+				return "add()";
+			}
+			function add(){
+				var sum=0;
+				for (var k=0;k<arguments.length;k++)
+				{
+					sum=sum+arguments[k];
+				}
+				return sum;
+			}
+			var sum=add(1,6);
+			console.log(sum);
+			var sum=add(1,6,8);
+			console.log(sum);
+			var sum=add();
+			//nan 不是数字 not a number
+			console.log(sum);
+			var sum=add("a","b");
+			console.log(sum);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//modal业务层
+			function closeMyWindow() {
+				//bom的window对象
+				var isClose = window.confirm("你真的要退出吗?");
+				if (isClose) {
+					window.close();
+				}
+			}
+			console.log(window.screen.width);
+			console.log(window.screen.height);
+			console.log(document.documentElement.clientWidth); //网页的宽度
+			console.log(document.documentElement.clientHeight);
+
+			function load() {
+				var closeBtn1 = document.getElementById("closebtn1");
+
+				closeBtn1.onclick = closeMyWindow;
+			}
+			//网页加载完之后，执行load
+			window.onload = load;
+		</script>
+	</head>
+
+	<body>
+		<!--view层-->
+		<!--在标签中没有onclick，view层与modal层耦合低-->
+		<input id="closebtn1" type="button" value="close" />
+		<input onclick="closeMyWindow()" type="button" value="close" />
+	</body>
+
+</html>

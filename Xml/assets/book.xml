@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<books>
+    <book cat="玄幻">
+        <title>玄幻的故事</title>
+        <price>$33</price>
+        <author>pual</author>
+        </book>
+    
+	<book cat = "web">
+	    <title>天空之城</title>
+	    <price>100.00yuan</price>
+	    <author>李志</author>
+	    <description>
+	        <![CDATA["这本书是李志02年卖肾换来的啦。。。。。。。"]]>
+	        
+	    </description>
+	</book>
+</books>
